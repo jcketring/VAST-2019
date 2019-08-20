@@ -208,7 +208,6 @@ function heatmap_input(heatmap_name, color, damage_type, nHours_input) {
     // update the elements
     function update(nHours) {
         // adjust the text on the range slider
-        console.log(nHours_input + "-value");
         d3.select(nHours_input + "-value").text(nHours);
         d3.select(nHours_input).property("value", nHours);
 
@@ -341,14 +340,14 @@ function heatmap_input(heatmap_name, color, damage_type, nHours_input) {
     
 }
 
-heatmap("#heatmap1", "blue", "sewer");
-heatmap("#heatmap2", "yellow", "power");
-heatmap("#heatmap3", "green", "roads");
-heatmap("#heatmap4", "red", "medical");
-heatmap("#heatmap5", "violet", "buildings");
+heatmap("#chart1", "blue", "sewer");
+heatmap("#chart2", "yellow", "power");
+heatmap("#chart3", "green", "roads");
+heatmap("#chart4", "red", "medical");
+heatmap("#chart5", "violet", "buildings");
 
-heatmap_input("#heatmap6", "blue", "sewer", "#nHours6");
-heatmap_input("#heatmap7", "yellow", "power", "#nHours7");
-heatmap_input("#heatmap8", "green", "roads", "#nHours8");
-heatmap_input("#heatmap9", "red", "medical", "#nHours9");
-heatmap_input("#heatmap10", "violet", "buildings", "#nHours10");
+heatmap_input("#chart6", "blue", "sewer", "#nHours6");
+heatmap_input("#chart7", "yellow", "power", "#nHours7");
+heatmap_input("#chart8", "green", "roads", "#nHours8");
+heatmap_input("#chart9", "red", "medical", "#nHours9");
+heatmap_input("#chart10", "violet", "buildings", "#nHours10");

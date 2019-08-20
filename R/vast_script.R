@@ -6,7 +6,7 @@ library(magrittr)
 
 rm(list = ls())
 
-setwd("C:\\Users\\joket\\Desktop\\VAST\\Granted")
+setwd("C:\\Users\\joket\\Documents\\VAST 2019\\VAST\\VAST-2019")
 
 #read csv file into data frame
 totalData <- read.csv(file="mc1-reports-data.csv", header=TRUE, sep=",")
@@ -50,7 +50,7 @@ divData<-split(totalData, totalData$location, drop = TRUE)
 #------------------------------------------------------------------------------------------------------------
 #Set which type to make csv for
 filename = "roads2.csv"
-column = 4
+column = 5
 
 #create empty vectors to populate
 score <- matrix(nrow = n_locations*11, ncol = 1)
@@ -72,6 +72,8 @@ for(i in 1:nrow(totalData)) {
   }
 }
 heatdata <- data.frame(location, score, total)
+
+print(max(heatdata$total))
 write.csv(heatdata, file = filename)
 
 #------------------------------------------------------------------------------------------------------------
